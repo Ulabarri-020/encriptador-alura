@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #f3f5fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.input-section, .output-section {
+    flex: 1;
+    padding: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    resize: none;
+    background-color: #f3f5fc;
+    color: #0a3871;
+}
+
+.info {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #495057;
+    opacity: 0.8;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 24px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#encrypt-btn {
+    background-color: #0a3871;
+    color: #fff;
+}
+
+#decrypt-btn {
+    background-color: #d8dfe8;
+    color: #0a3871;
+    border: 1px solid #0a3871;
+}
+
+.copy-btn {
+    background-color: #0a3871;
+    color: #fff;
+}
+
+.copy-btn:hover {
+    background-color: #0a3871;
+    opacity: 0.8;
+}
+
+.output-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 32px;
+    padding: 40px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#output-img {
+    width: 50%;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.output-message {
+    text-align: center;
+    word-wrap: break-word; /* Asegura que el texto no se desborde */
+    max-width: 100%; /* Asegura que el texto se mantenga dentro del contenedor */
+}
+
+#output-title {
+    font-size: 24px;
+    color: #343a40;
+}
+
+#output-text {
+    font-size: 16px;
+    color: #495057;
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+    }
+    .input-section, .output-section {
+        width: 100%;
+        padding: 10px;
+    }
+    textarea {
+        height: 150px;
+    }
+    #output-img {
+        display: none;
+    }
+    .output-section {
+        max-height: 250px;
+        padding: 20px;
+    }
+    .output-message {
+        font-size: 14px;
+    }
+    #output-title {
+        font-size: 20px;
+    }
+    #output-text {
+        font-size: 14px;
+    }
+}
